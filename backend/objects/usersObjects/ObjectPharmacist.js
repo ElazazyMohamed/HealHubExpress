@@ -1,7 +1,7 @@
 import { calculateAge } from "./helperFunctions/calculateAge.js"
 
 class ObjectPharmacist {
-    #_id;
+    _id;
     name;
     email;
     dob;
@@ -29,15 +29,6 @@ class ObjectPharmacist {
         this.status = "registered";
         this.requiredDocuments = {};
         this.chats = [];
-    }
-
-    //getter and setter for #_id
-    set_Id(id) {
-        this.#_id = id;
-    }
-
-    get_Id() {
-        return this.#_id;
     }
 }
   

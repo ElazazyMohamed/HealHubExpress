@@ -2,7 +2,7 @@ import { calculateAge } from "./helperFunctions/calculateAge.js"
 import EmergencyContact from "../otherObjects/EmergencyContact.js";
 
 class ObjectPatient {
-    #_id;
+    _id;
     name;
     email;
     dob;
@@ -36,15 +36,6 @@ class ObjectPatient {
         this.unRegisteredFamilyMembers = [];
         this.prescriptions = [];
         this.chats = [];
-    }
-
-    //getter and setter for #_id
-    set_Id(id) {
-        this.#_id = id;
-    }
-
-    get_Id() {
-        return this.#_id;
     }
 }
   

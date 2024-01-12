@@ -12,6 +12,6 @@ class ObjectUser {
     this.referenceId = referenceId;
   }
 }
-  
-module.exports = ObjectUser;
+
+export default ObjectUser;
   

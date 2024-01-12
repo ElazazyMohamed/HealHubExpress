@@ -15,6 +15,7 @@ const app = express();
 // .env
 const port = process.env.PORT || 4000;
 const mongo = process.env.MONGO_URI;
+const secretJWT = process.env.JWT_SECRET;
 
 //middleware
 app.use(express.json());
@@ -33,4 +34,4 @@ app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 
-export default mongo;
+export { mongo, secretJWT };

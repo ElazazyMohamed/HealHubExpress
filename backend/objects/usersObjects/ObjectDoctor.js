@@ -1,7 +1,7 @@
 import { calculateAge } from "./helperFunctions/calculateAge.js"
 
 class ObjectDoctor {
-    #_id;
+    _id;
     name;
     email;
     dob;
@@ -36,15 +36,6 @@ class ObjectDoctor {
         this.patients = [];
         this.appointments = [];
         this.chats = [];
-    }
-
-    //getter and setter for #_id
-    set_Id(id) {
-        this.#_id = id;
-    }
-
-    get_Id() {
-        return this.#_id;
     }
 }
   

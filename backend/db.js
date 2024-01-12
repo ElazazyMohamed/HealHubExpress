@@ -1,22 +1,21 @@
 import mongo from "./app.js";
-
-const { MongoClient } = require('mongodb');
+import { MongoClient } from 'mongodb';
 
 let client;
 
-async function connectToDatabase() {
+export async function connectToDatabase() {
   if (!client) {
     client = await MongoClient.connect(mongo, { useNewUrlParser: true, useUnifiedTopology: true });
   }
   console.log("Starting Connection ...");
+  console.log("Connected");
   return client.db();
 }
 
-function closeDatabaseConnection() {
+export function closeDatabaseConnection() {
   if (client) {
     console.log("... Shutting down the connection")
+    console.log("Disconnected");
     client.close();
   }
 }
-
-module.exports = { connectToDatabase, closeDatabaseConnection };
