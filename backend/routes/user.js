@@ -1,10 +1,10 @@
 import express from "express";
+import { requireAuth } from "../Middleware/authMiddleware.js";
 
 // Functions import
 import { patientSignUp } from "../controllers/userController/patientSignUp.js";
 import { doctorSignUp } from "../controllers/userController/doctorSignUp.js";
 import { pharmacistSignUp } from "../controllers/userController/pharmacistSignUp.js";
-import { requireAuth } from "../Middleware/authMiddleware.js";
 import { login } from "../controllers/userController/login.js";
 import { logout } from "../controllers/userController/logout.js";
 
